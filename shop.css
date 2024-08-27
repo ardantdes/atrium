@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: red; /* Set default font color to red */
+}
+
+header {
+    background-color: #333;
+    color: red; /* Set header text color to red */
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: red; /* Set h1 color to red */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: red; /* Set navigation links color to red */
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: red; /* Set product text color to red */
+}
+
+.product h3 {
+    color: red; /* Set product title color to red */
+}
+
+.product p {
+    color: red; /* Set product price color to red */
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow images to wrap to new lines on small screens */
+}
+
+.gallery-image {
+    max-width: 100%; /* Ensure images fit within the gallery container */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    width: 250px; /* Increase the width to 250px */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.gallery-image:hover {
+    opacity: 0.8; /* Slightly dim the image on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px; /* Adjust as needed */
+    height: auto;
+}
+
+#caption {
+    margin: 10px auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart {
+    position: fixed;
+    bottom: 10px; /* Move to bottom of the page */
+    right: 20px;
+    width: auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: red; /* Set cart text color to red */
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: red; /* Set cart items text color to red */
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: red; /* Set cart item text color to red */
+}
+
+#total-price {
+    font-weight: bold;
+    margin-left: 10px;
+    color: red; /* Set total price color to red */
+}
+
+footer {
+    background-color: #333;
+    color: red; /* Set footer text color to red */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.size-selection {
+    margin: 10px 0;
+}
+
+.size-selection label {
+    margin-right: 10px;
+}
+
+.size-selection input {
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .product {
+        margin: 5px 0;
+    }
+
+    .product-image {
+        max-width: 100%; /* Ensure images scale down on smaller screens */
+    }
+
+    #cart {
+        width: 200px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .cart-icon img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        margin: 5px 0;
+    }
+
+    .product-image {
+        max-width: 100%; /* Ensure images scale down on very small screens */
+    }
+
+    .prev, .next {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+}
